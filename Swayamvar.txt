@@ -1,0 +1,33 @@
+import java.util.*;
+class Swayamvar {
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        String s1=in.next();
+        String s2=in.next();
+        List<String> list1=new ArrayList<>();
+        List<String> list2=new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
+            list1.add(""+s1.charAt(i));
+        }
+        for(int i=0;i<n;i++)
+        {
+            list2.add(""+s2.charAt(i));
+        }
+        for(int i=0;i<n;i++)
+        {
+            String ss1=list1.get(i);
+            if(list2.contains(ss1))
+            {
+                list2.remove(ss1);
+            }
+            else
+            {
+                break;
+            }
+        }
+        System.out.println(list2.size());
+    }
+}
